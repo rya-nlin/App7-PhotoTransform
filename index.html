@@ -142,7 +142,14 @@
         context.fillStyle = "black";
         context.fillText("Original image will go here", 10, 20);
       </script>
-
+     <canvas id="newCanvas" width=600 height = 500 style="border:1px solid #d3d3d3;"></canvas> <!--creating new canvas-->
+     <script> // js for new canvas
+      var can = document.getElementById('newCanvas'); //instantiate canvas in js
+      var ctx = can.getContext("2d"); //get the context of the canvas
+      ctx.font = '20pt Calibri'; //set the font - same as other canvas
+      ctx.fillText("Blue contents"); //identifying text for the canvas
+      
+     </script>
     </div><!-- /content -->
     <div data-role="footer" data-position="fixed">
       <p>DIY Diagnostics</p>
