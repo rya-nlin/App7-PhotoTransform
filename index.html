@@ -110,10 +110,11 @@
           }
           ctx.putImageData(imgData, 0, 0); //draws blue image on second canvas
          const temp = new Image(); //creating a temporary Image element
+         temp.src = can.toDataURL(); //putting the blue image in new temp element
          temp.onload = function () {
           drawImageIOSFix(ctx, tempImage, 0, 0, tempImage.naturalWidth, tempImage.naturalHeight, 0, 0, 600, 500);//drawing resized image on canvas 2
          }
-         temp.src = can.toDataURL();
+         
         } // end of img.onload
         
         img.src = reader.result;
