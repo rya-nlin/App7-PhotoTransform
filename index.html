@@ -102,18 +102,13 @@
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
-          const imgData = context.getImageData(0, 0, img.naturalWidth, img.naturalHeight); //gets the pixel data for the image
+          const imgData = context.getImageData(0, 0, 600, 500); //gets the pixel data for the image
           const data = imgData.data; // creates an array of the pixel data
           for (let i = 0; i < data.length; i += 4) { //for loop goes through each pixel, seeing the color and removing red or green
            data[i] = 0; //removes red
            data[i + 1] = 0; //removes green
           }
           ctx.putImageData(imgData, 0, 0); //draws blue image on second canvas
-         const temp = new Image(); //creating a temporary Image element
-         temp.src = can.toDataURL(); //putting the blue image in new temp element
-         temp.onload = function () {
-          drawImageIOSFix(ctx, temp, 0, 0, tempImage.naturalWidth, tempImage.naturalHeight, 0, 0, 600, 500);//drawing resized image on canvas 2
-         }
          
         } // end of img.onload
         
