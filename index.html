@@ -112,7 +112,7 @@
          const temp = new Image(); //creating a temporary Image element
          temp.src = can.toDataURL(); //putting the blue image in new temp element
          temp.onload = function () {
-          drawImageIOSFix(ctx, tempImage, 0, 0, tempImage.naturalWidth, tempImage.naturalHeight, 0, 0, 600, 500);//drawing resized image on canvas 2
+          drawImageIOSFix(ctx, temp, 0, 0, tempImage.naturalWidth, tempImage.naturalHeight, 0, 0, 600, 500);//drawing resized image on canvas 2
          }
          
         } // end of img.onload
